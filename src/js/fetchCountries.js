@@ -6,9 +6,9 @@ export default function fetchCountries(name) {
 
     return fetch(url)
         .then(response => {
-            // if (response.status === 404) {
-            //     throw new Error(response.status);
-            // }
+            if (response.status === 404) {
+                throw new Error(response.status);
+            }
             return response.json()
         })
         // .catch(error => console.log(error));

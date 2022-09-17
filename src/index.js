@@ -19,7 +19,7 @@ searchForm.addEventListener('input', debounce(onSearchFormInput, DEBOUNCE_DELAY)
 function onSearchFormInput(e) {
     e.preventDefault();
     
-    if (searchForm.value === '') {
+    if (searchForm.value.trim() === '') {
         clearHtml();
         return;
     }
